@@ -1,27 +1,24 @@
 import tkinter as tk
-from tkinter import messagebox
 import subprocess
 
-def run_detector():
+def run_webcam():
     subprocess.run(["python", "main.py"])
 
-def show_about():
-    messagebox.showinfo("About", "This is a Fancy Face Detector using Python and OpenCV!")
+def run_image_detector():
+    subprocess.run(["python", "image_detector.py"])
+
+def run_emotion_detector():
+    subprocess.run(["python", "emotion_detector.py"])
 
 app = tk.Tk()
-app.title("Fancy Face Detector App")
-app.geometry("300x200")
+app.title("Face Detection Toolkit")
+app.geometry("350x300")
 
-title = tk.Label(app, text="😊 Face Detector 😊", font=("Arial", 18))
-title.pack(pady=10)
+tk.Label(app, text="😎 Fancy Face Detector Toolkit", font=("Arial", 16)).pack(pady=10)
 
-start_btn = tk.Button(app, text="Start Detecting", command=run_detector)
-start_btn.pack(pady=5)
-
-about_btn = tk.Button(app, text="About", command=show_about)
-about_btn.pack(pady=5)
-
-exit_btn = tk.Button(app, text="Exit", command=app.quit)
-exit_btn.pack(pady=5)
+tk.Button(app, text="1️⃣ Detect Faces (Webcam)", command=run_webcam).pack(pady=5)
+tk.Button(app, text="2️⃣ Detect Faces (Image)", command=run_image_detector).pack(pady=5)
+tk.Button(app, text="3️⃣ Detect Emotion (Image)", command=run_emotion_detector).pack(pady=5)
+tk.Button(app, text="❌ Exit", command=app.quit).pack(pady=15)
 
 app.mainloop()

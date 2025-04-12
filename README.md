@@ -1,24 +1,32 @@
-# 😎 Fancy Face Detector
+# 😎 Face Detector Toolkit
 
-A beginner-friendly Python app that detects faces using OpenCV and has a cute little GUI using Tkinter!
+A beginner-friendly, AI-powered face detection app that helps you:
+- Detect faces in real-time using your webcam
+- Detect faces in images
+- Recognize emotions using Deep Learning
+- Save snapshots of faces
+
+## 🔧 Built With
+
+- 🐍 Python (OpenCV, DeepFace, Tkinter)
+- 🌐 HTML + CSS + JavaScript (Landing Page)
+- 📁 JSON for config
+- 📸 Haarcascade AI Models
+- 🧠 Deep Learning (Emotion detection)
 
 ## 📸 Features
-- Real-time face detection with your webcam
-- Easy GUI with start/exit buttons
-- Simple Python project to add to your portfolio
 
-## 🧰 Tech Used
-- Python 3
-- OpenCV
-- Tkinter (GUI)
+- [x] Webcam face detection
+- [x] Face detection in uploaded image
+- [x] Emotion recognition (happy, sad, angry, etc.)
+- [x] Save faces to disk
+- [x] GUI with Tkinter
+- [x] Web UI (HTML/CSS)
 
-## 🚀 How to Run
-1. Clone this repo
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the GUI: `python gui.py`
+## 🚀 Run Locally
 
-## 📷 Screenshots
-![App Screenshot](assets/screenshot.png)
-
-## 🧑‍💻 Author
-Made with ❤️ by Kagiso
+```bash
+git clone https://github.com/your-username/face-detector-toolkit.git
+cd face-detector-toolkit
+pip install -r requirements.txt
+python gui.py
